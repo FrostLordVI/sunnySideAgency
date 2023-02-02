@@ -1,0 +1,60 @@
+#grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    overflow: hidden;
+    margin-right: -5px;
+    max-width: 100vw;
+    height: 80vh;
+    }
+    #cell14, #cell24, #cell34, #cell44{
+        background-size: cover;
+        background-position:top;
+        background-repeat: no-repeat;
+    }
+    #cell14 { 
+        grid-area: 1 / 1 / 2 / 2;
+        background-image:url(../images/desktop/image-gallery-milkbottles.jpg) ;
+    }
+    #cell24 { 
+        grid-area: 1 / 2 / 2 / 3;
+        background-image: url(../images/desktop/image-gallery-orange.jpg);
+    }
+    #cell34 { 
+        grid-area: 1 / 3 / 2 / 4;
+        background-image: url(../images/desktop/image-gallery-cone.jpg);
+    }
+    #cell44 { 
+        grid-area: 1 / 4 / 2 / 5;
+        background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+    }
+    
+    .cellType4{
+        position: relative;
+        overflow: hidden;
+        width: 25vw;
+        height: auto;
+        
+    }
+
+@media screen and (max-width:600px) {
+    #grid4 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        #cell14 { grid-area: 1 / 1 / 2 / 2; }
+        #cell24 { grid-area: 1 / 2 / 2 / 3; }
+        #cell34 { grid-area: 2 / 1 / 3 / 2; }
+        #cell44 { grid-area: 2 / 2 / 3 / 3; }
+
+    .cellType4{
+        width: 50vw;
+    }    
+        
+}

@@ -1,0 +1,100 @@
+#grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    #cell12 { 
+        grid-area: 1 / 1 / 2 / 2;
+        background-image: url(../images/desktop/image-graphic-design.jpg);
+        background-size: cover;
+        background-position:top;
+        background-repeat: no-repeat;
+    }
+    #cell22 { 
+        grid-area: 1 / 2 / 2 / 3;
+        background-image: url(../images/desktop/image-photography.jpg);
+        background-size: cover;
+        background-position:top;
+        background-repeat: no-repeat;
+    }
+   
+    .cellType2{
+        position: relative;
+        width: 50vw;
+        height: 50vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3{
+            font-family: 'Fraunces', serif;
+            font-size: 40px;
+            opacity: .8;
+            text-align: end;
+            margin-top: 200px;
+        }
+
+        p{
+            text-align: center;
+            width: 60%;
+            font-family: 'Barlow', serif;
+            font-size: 27px;
+            opacity: .8;
+            margin-top: -20px;
+        }
+    }
+
+    .bcg{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 50vw;
+    }
+
+@media screen and (max-width:1200px) {
+    .cellType2{
+       
+        h3{
+            font-size: 30px;
+        }
+
+        p{
+            font-size: 21px;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    #grid2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        #cell12 { grid-area: 1 / 1 / 2 / 2; }
+        #cell22 { grid-area: 2 / 1 / 3 / 2; }
+
+        .cellType2{
+            width: 100vw;
+        }
+}
+
+@media screen and (max-width:400px) {
+    .cellType2{
+       
+        h3{
+            font-size: 23px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+    }
+}
